@@ -239,6 +239,7 @@ h1 {
 
 h2 {
   font-family: "Proza Libre", sans-serif;
+  font-size: 3rem;
 }
 
 a {
@@ -307,7 +308,10 @@ header .wrapper {
   z-index: 1;
 }
 .header-text h4 {
-  margin: 0;
+  margin: 5px 0 0 0;
+}
+.header-text p {
+  margin: 10px 0;
 }
 
 .header-info {
@@ -335,6 +339,35 @@ header .wrapper {
   background: linear-gradient(to bottom, #0C0C0C 50%, #F8F0C6 50%);
   -webkit-background-clip: text;
           background-clip: text;
+}
+
+.about {
+  padding: 50px 0;
+}
+.about .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about-image {
+  -ms-flex-preferred-size: 35%;
+      flex-basis: 35%;
+}
+.about-image img {
+  border-radius: 10%;
+  -webkit-box-shadow: 2px 2px #fff, 10px 10px #1B998B;
+          box-shadow: 2px 2px #fff, 10px 10px #1B998B;
+}
+
+.about-text {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
 }
 
 .button {
