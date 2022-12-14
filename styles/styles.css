@@ -258,6 +258,10 @@ img {
   max-width: 1200px;
 }
 
-body {
+header {
   background-color: #f0f7ee;
+}
+
+h1 {
+  margin: 0;
 }

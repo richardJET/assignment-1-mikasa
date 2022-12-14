@@ -1,0 +1,8 @@
+@use './variables' as *;
+
+header{
+    background-color: $primary;
+}
+h1{
+    margin: 0;
+}
