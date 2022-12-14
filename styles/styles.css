@@ -225,3 +225,15 @@ html {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
+
+h1 {
+  font-family: "PT Sans", sans-serif;
+}
+
+h2 {
+  font-family: "Proza Libre", sans-serif;
+}
+
+h3 {
+  font-family: "Frank Ruhl Libre", serif;
+}

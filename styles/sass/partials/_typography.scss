@@ -1,0 +1,13 @@
+@use './variables' as *;
+
+h1{
+    font-family: $titleFont;
+}
+
+h2{
+    font-family: $headerFont;
+}
+
+h3{
+    font-family: $baseFont;
+}
