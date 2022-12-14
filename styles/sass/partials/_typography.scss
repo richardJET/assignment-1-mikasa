@@ -1,13 +1,17 @@
 @use './variables' as *;
 
+html {
+    font-family: $baseFont;
+    color: $secondary;
+    font-size: 125%;
+}
+
 h1{
     font-family: $titleFont;
+    font-size: 4.5rem;
 }
 
 h2{
     font-family: $headerFont;
 }
 
-h3{
-    font-family: $baseFont;
-}
