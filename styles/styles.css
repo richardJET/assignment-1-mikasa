@@ -249,6 +249,7 @@ a {
 
 ul {
   list-style: none;
+  padding-left: 0;
 }
 
 img {
@@ -268,7 +269,8 @@ header {
   background-color: #f0f7ee;
   padding: 50px 0;
 }
-header .wrapper {
+
+.index-header .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -292,20 +294,26 @@ header .wrapper {
           box-shadow: -8px -8px #f0f7ee, -20px -20px #DC2A27;
 }
 
-.header-text {
-  position: relative;
-}
-.header-text .fa-paw {
-  rotate: -30deg;
-  position: absolute;
-  color: #FCBA04;
-  left: 80px;
-  top: -50px;
-}
-.header-text h1 {
+h1 {
   margin: 0 0 50px 0;
   position: relative;
   z-index: 1;
+}
+
+.fa-paw,
+.fa-bone {
+  rotate: -30deg;
+  position: absolute;
+  color: #FCBA04;
+}
+
+.fa-paw {
+  left: 80px;
+  top: -50px;
+}
+
+.header-text {
+  position: relative;
 }
 .header-text h4 {
   margin: 5px 0 0 0;
@@ -361,13 +369,23 @@ header .wrapper {
 }
 .about-image img {
   border-radius: 10%;
-  -webkit-box-shadow: 2px 2px #fff, 10px 10px #1B998B;
-          box-shadow: 2px 2px #fff, 10px 10px #1B998B;
+  -webkit-box-shadow: 3px 3px #fff, 12px 12px #1B998B;
+          box-shadow: 3px 3px #fff, 12px 12px #1B998B;
 }
 
 .about-text {
   -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
+}
+
+.gallery-header .wrapper {
+  position: relative;
+}
+
+.fa-bone {
+  bottom: 50px;
+  left: 100px;
+  rotate: 30deg;
 }
 
 .button {

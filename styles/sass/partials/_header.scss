@@ -3,12 +3,13 @@
 header{
     background-color: $primary;
     padding: 50px 0;
-    .wrapper{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: space-between;
-    }
+}
+
+.index-header .wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
 }
 .header-photo{
     flex-basis: 60%;
@@ -17,20 +18,24 @@ header{
         box-shadow: -8px -8px $primary,-20px -20px $tertiary;
     }
 }
+h1 {
+    margin: 0 0 50px 0;
+    position: relative;
+    z-index: 1;
+}
+.fa-paw,
+.fa-bone{
+    rotate: (-30deg);
+    position: absolute;
+    color: $quaternary;
+}
+.fa-paw{
+    left: 80px;
+    top: -50px;
+
+}
 .header-text{
     position: relative;
-    .fa-paw{
-        rotate: (-30deg);
-        position: absolute;
-        color: $quaternary;
-        left: 80px;
-        top: -50px;
-    }
-    h1 {
-        margin: 0 0 50px 0;
-        position: relative;
-        z-index: 1;
-    }
     h4 {
         margin: 5px 0 0 0;
     }

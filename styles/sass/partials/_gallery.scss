@@ -1,0 +1,9 @@
+@use './variables' as *;
+.gallery-header .wrapper{
+    position: relative;
+}
+.fa-bone{
+    bottom: 50px;
+    left: 100px;
+    rotate: (30deg);
+}
