@@ -2,7 +2,53 @@
 
 header{
     background-color: $primary;
+    padding: 50px 0;
+    .wrapper{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
 }
-h1{
-    margin: 0;
+.header-photo{
+    flex-basis: 60%;
+    img{
+        border-radius: 75% 50% / 50%;
+        box-shadow: -8px -8px $primary,-20px -20px $tertiary;
+    }
 }
+.header-text{
+    position: relative;
+    .fa-paw{
+        rotate: (-30deg);
+        position: absolute;
+        color: $quaternary;
+        left: 80px;
+        top: -50px;
+    }
+    h1 {
+        margin: 0 0 50px 0;
+        position: relative;
+        z-index: 1;
+    }
+    h4 {
+        margin: 0;
+    }
+}
+.header-info{
+    display: flex;
+    margin-top: 50px;
+    div{
+        flex-basis: 50%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.fa-circle{
+    color: transparent;
+    background: linear-gradient(to bottom, $secondary 50%, #F8F0C6 50%);
+    background-clip: text;
+}
+

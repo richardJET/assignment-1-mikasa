@@ -8,10 +8,15 @@ html {
 
 h1{
     font-family: $titleFont;
-    font-size: 4.5rem;
+    font-size: 6rem;
 }
 
 h2{
     font-family: $headerFont;
+}
+
+a{
+    text-decoration: none;
+    color: $secondary;
 }
 

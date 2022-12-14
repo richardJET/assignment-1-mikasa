@@ -234,11 +234,16 @@ html {
 
 h1 {
   font-family: "PT Sans", sans-serif;
-  font-size: 4.5rem;
+  font-size: 6rem;
 }
 
 h2 {
   font-family: "Proza Libre", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #0C0C0C;
 }
 
 ul {
@@ -255,13 +260,84 @@ img {
 .wrapper {
   margin: 0 auto;
   width: 90%;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 header {
   background-color: #f0f7ee;
+  padding: 50px 0;
+}
+header .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-h1 {
+.header-photo {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+}
+.header-photo img {
+  border-radius: 75% 50%/50%;
+  -webkit-box-shadow: -8px -8px #f0f7ee, -20px -20px #DC2A27;
+          box-shadow: -8px -8px #f0f7ee, -20px -20px #DC2A27;
+}
+
+.header-text {
+  position: relative;
+}
+.header-text .fa-paw {
+  rotate: -30deg;
+  position: absolute;
+  color: #FCBA04;
+  left: 80px;
+  top: -50px;
+}
+.header-text h1 {
+  margin: 0 0 50px 0;
+  position: relative;
+  z-index: 1;
+}
+.header-text h4 {
   margin: 0;
+}
+
+.header-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 50px;
+}
+.header-info div {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+}
+
+.fa-circle {
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #0C0C0C), color-stop(50%, #F8F0C6));
+  background: linear-gradient(to bottom, #0C0C0C 50%, #F8F0C6 50%);
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.button {
+  padding: 10px 25px;
+  background-color: #FCBA04;
 }

@@ -1,0 +1,6 @@
+@use './variables' as *;
+
+.button{
+    padding: 10px 25px;
+    background-color: $quaternary;
+}
