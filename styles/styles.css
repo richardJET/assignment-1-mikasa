@@ -252,7 +252,8 @@ ul {
   padding-left: 0;
 }
 
-img {
+img,
+video {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -302,12 +303,12 @@ h1 {
 
 .fa-paw,
 .fa-bone {
-  rotate: -30deg;
   position: absolute;
   color: #FCBA04;
 }
 
 .fa-paw {
+  rotate: -30deg;
   left: 80px;
   top: -50px;
 }
@@ -349,9 +350,10 @@ h1 {
           background-clip: text;
 }
 
-.about {
+section {
   padding: 50px 0;
 }
+
 .about .wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -384,8 +386,45 @@ h1 {
 
 .fa-bone {
   bottom: 50px;
-  left: 100px;
-  rotate: 30deg;
+  left: 70px;
+  rotate: 35deg;
+}
+
+.gallery-section .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.timeline {
+  -ms-flex-preferred-size: 20%;
+      flex-basis: 20%;
+}
+
+.gallery {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+.gallery div ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.gallery div ul li {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+}
+.gallery div ul img {
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .button {

@@ -25,14 +25,13 @@ h1 {
 }
 .fa-paw,
 .fa-bone{
-    rotate: (-30deg);
     position: absolute;
     color: $quaternary;
 }
 .fa-paw{
+    rotate: (-30deg);
     left: 80px;
     top: -50px;
-
 }
 .header-text{
     position: relative;

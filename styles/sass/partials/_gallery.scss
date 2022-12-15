@@ -4,6 +4,29 @@
 }
 .fa-bone{
     bottom: 50px;
-    left: 100px;
-    rotate: (30deg);
+    left: 70px;
+    rotate: (35deg);
+}
+
+.gallery-section .wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeline{
+    flex-basis: 20%;
+}
+.gallery{
+    flex-basis: 70%;
+    div ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        li{
+            flex-basis: 33%;
+        }
+        img{
+            object-fit: contain;
+        }
+    }
 }
