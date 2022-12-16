@@ -42,7 +42,8 @@ button {
         }
     }
     .paw-select,
-    h3:hover ~ i{
+    h3:hover ~ i,
+    &:focus .fa-paw{
         background-color: $quaternary;
         background-clip: text;
     }

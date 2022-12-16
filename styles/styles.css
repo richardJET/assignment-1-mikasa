@@ -423,7 +423,7 @@ button .fa-paw:hover, button .fa-paw:focus {
           background-clip: text;
 }
 button .paw-select,
-button h3:hover ~ i {
+button h3:hover ~ i, button:focus .fa-paw {
   background-color: #FCBA04;
   -webkit-background-clip: text;
           background-clip: text;

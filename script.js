@@ -1,7 +1,3 @@
-// When hover remove current selection button style
-// when click change current selection style
-
-
 const listItemIndex = li => {
     let i = 0;
     while (li.previousElementSibling) {
@@ -14,16 +10,26 @@ const listItemIndex = li => {
 const timelineOl = document.querySelector('.timeline ol');
 
 timelineOl.addEventListener('click', e => {
-    const timelineLi = e.target.parentElement.parentElement;
+    let timelineLiSelect;
+    if(e.target.tagName === 'H3' || e.target.tagName === 'I'){
+        timelineLiSelect = e.target.parentElement.parentElement;
+    }else if(e.target.tagName === 'BUTTON'){
+        timelineLiSelect = e.target.parentElement;
+    }
+        const timelineLiAll = document.querySelectorAll('.timeline li');
+        const galleryDivAll = document.querySelectorAll('.gallery div');
+        
+        timelineLiAll.forEach( li => {
+            li.children[0].children[1].classList.remove('paw-select');
+        });
+        timelineLiSelect.children[0].children[1].classList.add('paw-select');
 
-    const galleryDivAll = document.querySelectorAll('.gallery div');
-    
-    galleryDivAll.forEach(div => {
-        div.classList.remove('div-select');
-    });
-    
-    const galleryDivSelect = galleryDivAll[listItemIndex(timelineLi)];
-    galleryDivSelect.classList.add('div-select');
+        galleryDivAll.forEach(div => {
+            div.classList.remove('div-select');
+        });
+        
+        const galleryDivSelect = galleryDivAll[listItemIndex(timelineLiSelect)];
+        galleryDivSelect.classList.add('div-select');    
 });
 
 
