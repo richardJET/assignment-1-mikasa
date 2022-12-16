@@ -252,6 +252,10 @@ ul {
   padding-left: 0;
 }
 
+ol li {
+  list-style: none;
+}
+
 img,
 video {
   width: 100%;
