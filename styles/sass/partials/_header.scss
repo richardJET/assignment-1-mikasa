@@ -10,6 +10,14 @@ header{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
+    
+    .fa-paw {
+        rotate: (-30deg);
+        left: 80px;
+        top: -50px;
+        position: absolute;
+        color: $quaternary;
+    }
 }
 .header-photo{
     flex-basis: 60%;
@@ -23,16 +31,7 @@ h1 {
     position: relative;
     z-index: 1;
 }
-.fa-paw,
-.fa-bone{
-    position: absolute;
-    color: $quaternary;
-}
-.fa-paw{
-    rotate: (-30deg);
-    left: 80px;
-    top: -50px;
-}
+
 .header-text{
     position: relative;
     h4 {

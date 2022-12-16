@@ -284,6 +284,13 @@ header {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.index-header .wrapper .fa-paw {
+  rotate: -30deg;
+  left: 80px;
+  top: -50px;
+  position: absolute;
+  color: #FCBA04;
+}
 
 .header-photo {
   -ms-flex-preferred-size: 60%;
@@ -299,18 +306,6 @@ h1 {
   margin: 0 0 50px 0;
   position: relative;
   z-index: 1;
-}
-
-.fa-paw,
-.fa-bone {
-  position: absolute;
-  color: #FCBA04;
-}
-
-.fa-paw {
-  rotate: -30deg;
-  left: 80px;
-  top: -50px;
 }
 
 .header-text {
@@ -388,6 +383,8 @@ section {
   bottom: 50px;
   left: 70px;
   rotate: 35deg;
+  position: absolute;
+  color: #FCBA04;
 }
 
 .gallery-section .wrapper {
@@ -402,11 +399,41 @@ section {
 .timeline {
   -ms-flex-preferred-size: 20%;
       flex-basis: 20%;
+  text-align: center;
+}
+.timeline h3 {
+  margin: 0;
+  position: relative;
+  top: 50px;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+button .fa-paw {
+  -webkit-text-stroke: 2px #FCBA04;
+  -webkit-text-fill-color: transparent;
+}
+button .fa-paw:hover, button .fa-paw:focus {
+  background-color: #FCBA04;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+button .paw-select,
+button h3:hover ~ i {
+  background-color: #FCBA04;
+  -webkit-background-clip: text;
+          background-clip: text;
 }
 
 .gallery {
-  -ms-flex-preferred-size: 70%;
-      flex-basis: 70%;
+  -ms-flex-preferred-size: 75%;
+      flex-basis: 75%;
+}
+.gallery div {
+  display: none;
 }
 .gallery div ul {
   display: -webkit-box;
@@ -418,13 +445,16 @@ section {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.gallery div ul li {
+.gallery div li {
   -ms-flex-preferred-size: 33%;
       flex-basis: 33%;
 }
-.gallery div ul img {
+.gallery div img {
   -o-object-fit: contain;
      object-fit: contain;
+}
+.gallery .div-select {
+  display: block;
 }
 
 .button {
