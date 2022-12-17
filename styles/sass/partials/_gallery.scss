@@ -53,6 +53,10 @@ button {
     flex-basis: 80%;
     div {
         display: none;
+        position: relative;
+        z-index: -1;
+        height: 1400px;
+        
         ul{
             display: flex;
             justify-content: space-between;
@@ -67,6 +71,89 @@ button {
     }
     .div-select{
         display: block;
+    }
+    .div-up-in{
+        display: block;
+        animation: 
+            slide-up-in 0.5s forwards,
+            fade-in 0.5s forwards;
+    }
+    .div-up-out{
+        display: block;
+        animation: 
+            slide-up-out 0.5s forwards,
+            fade-out 0.5s forwards;
+    }
+    .div-down-in {
+        display: block;
+        animation: 
+            slide-down-in 0.5s forwards,
+            fade-in 0.5s forwards;
+    }
+    .div-down-out {
+        display: block;
+        animation: 
+            slide-down-out 0.5s forwards,
+            fade-out 0.5s forwards;
+    }
+}
+
+@keyframes slide-up-in{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes slide-up-out {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+@keyframes slide-down-in {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slide-down-out {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
     }
 }
 

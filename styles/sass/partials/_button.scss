@@ -3,4 +3,9 @@
 .button{
     padding: 10px 25px;
     background-color: $quaternary;
+
+    &:hover,
+    &focus{
+        color:#fff;
+    }
 }

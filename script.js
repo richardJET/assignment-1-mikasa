@@ -1,4 +1,4 @@
-const listItemIndex = li => {
+const itemIndex = li => {
     let i = 0;
     while (li.previousElementSibling) {
         li = li.previousElementSibling;
@@ -18,6 +18,7 @@ timelineOl.addEventListener('click', e => {
     }
         const timelineLiAll = document.querySelectorAll('.timeline li');
         const galleryDivAll = document.querySelectorAll('.gallery div');
+        const galleryDivSelect = galleryDivAll[itemIndex(timelineLiSelect)];
         
         timelineLiAll.forEach( li => {
             li.children[0].children[1].classList.remove('paw-select');
@@ -25,11 +26,22 @@ timelineOl.addEventListener('click', e => {
         timelineLiSelect.children[0].children[1].classList.add('paw-select');
 
         galleryDivAll.forEach(div => {
-            div.classList.remove('div-select');
-        });
-        
-        const galleryDivSelect = galleryDivAll[listItemIndex(timelineLiSelect)];
-        galleryDivSelect.classList.add('div-select');    
+            if (div.classList.contains('div-select')){
+                if(itemIndex(div) < itemIndex(timelineLiSelect)){
+                    div.classList.add('div-up-out');
+                    galleryDivSelect.classList.add('div-up-in');
+                }else{
+                    div.classList.add('div-down-out');
+                    galleryDivSelect.classList.add('div-down-in');
+                }
+                
+                div.addEventListener('animationend', () => { 
+                    div.className = '';
+                    galleryDivSelect.className = '';
+                    galleryDivSelect.classList.add('div-select'); 
+                },{once: true})   
+            }
+        }); 
 });
 
 
