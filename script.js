@@ -17,7 +17,7 @@ timelineOl.addEventListener('click', e => {
         timelineLiSelect = e.target.parentElement;
     }
         const timelineLiAll = document.querySelectorAll('.timeline li');
-        const galleryDivAll = document.querySelectorAll('.gallery div');
+        const galleryDivAll = document.querySelectorAll('.gallery-month');
         const galleryDivSelect = galleryDivAll[itemIndex(timelineLiSelect)];
         
         timelineLiAll.forEach( li => {
@@ -36,8 +36,8 @@ timelineOl.addEventListener('click', e => {
                 }
                 
                 div.addEventListener('animationend', () => { 
-                    div.className = '';
-                    galleryDivSelect.className = '';
+                    div.classList.remove('div-up-out', 'div-up-in', 'div-down-out', 'div-down-in', 'div-select');
+                    galleryDivSelect.classList.remove('div-up-out', 'div-up-in', 'div-down-out', 'div-down-in');
                     galleryDivSelect.classList.add('div-select'); 
                 },{once: true})   
             }

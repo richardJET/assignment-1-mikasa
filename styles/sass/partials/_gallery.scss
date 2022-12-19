@@ -53,9 +53,6 @@ button {
     flex-basis: 80%;
     div {
         display: none;
-        position: relative;
-        z-index: -1;
-        height: 1400px;
         
         ul{
             display: flex;
@@ -67,6 +64,10 @@ button {
         }
         img{
             object-fit: contain;
+            &:hover{
+                opacity: 0.7;
+                cursor: pointer;
+            }
         }
     }
     .div-select{
@@ -75,27 +76,33 @@ button {
     .div-up-in{
         display: block;
         animation: 
-            slide-up-in 0.5s forwards,
+            slide-up-in 1s forwards,
             fade-in 0.5s forwards;
     }
     .div-up-out{
         display: block;
+        position: relative;
+        z-index: -1;
         animation: 
-            slide-up-out 0.5s forwards,
+            slide-up-out 1s forwards,
             fade-out 0.5s forwards;
     }
     .div-down-in {
         display: block;
         animation: 
-            slide-down-in 0.5s forwards,
+            slide-down-in 1s forwards,
             fade-in 0.5s forwards;
     }
     .div-down-out {
         display: block;
         animation: 
-            slide-down-out 0.5s forwards,
+            slide-down-out 1s forwards,
             fade-out 0.5s forwards;
     }
+}
+
+.modal{
+    display: none;
 }
 
 @keyframes slide-up-in{

@@ -435,9 +435,6 @@ button h3:hover ~ i, button:focus .fa-paw {
 }
 .gallery div {
   display: none;
-  position: relative;
-  z-index: -1;
-  height: 1400px;
 }
 .gallery div ul {
   display: -webkit-box;
@@ -457,28 +454,38 @@ button h3:hover ~ i, button:focus .fa-paw {
   -o-object-fit: contain;
      object-fit: contain;
 }
+.gallery div img:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
 .gallery .div-select {
   display: block;
 }
 .gallery .div-up-in {
   display: block;
-  -webkit-animation: slide-up-in 0.5s forwards, fade-in 0.5s forwards;
-          animation: slide-up-in 0.5s forwards, fade-in 0.5s forwards;
+  -webkit-animation: slide-up-in 1s forwards, fade-in 0.5s forwards;
+          animation: slide-up-in 1s forwards, fade-in 0.5s forwards;
 }
 .gallery .div-up-out {
   display: block;
-  -webkit-animation: slide-up-out 0.5s forwards, fade-out 0.5s forwards;
-          animation: slide-up-out 0.5s forwards, fade-out 0.5s forwards;
+  position: relative;
+  z-index: -1;
+  -webkit-animation: slide-up-out 1s forwards, fade-out 0.5s forwards;
+          animation: slide-up-out 1s forwards, fade-out 0.5s forwards;
 }
 .gallery .div-down-in {
   display: block;
-  -webkit-animation: slide-down-in 0.5s forwards, fade-in 0.5s forwards;
-          animation: slide-down-in 0.5s forwards, fade-in 0.5s forwards;
+  -webkit-animation: slide-down-in 1s forwards, fade-in 0.5s forwards;
+          animation: slide-down-in 1s forwards, fade-in 0.5s forwards;
 }
 .gallery .div-down-out {
   display: block;
-  -webkit-animation: slide-down-out 0.5s forwards, fade-out 0.5s forwards;
-          animation: slide-down-out 0.5s forwards, fade-out 0.5s forwards;
+  -webkit-animation: slide-down-out 1s forwards, fade-out 0.5s forwards;
+          animation: slide-down-out 1s forwards, fade-out 0.5s forwards;
+}
+
+.modal {
+  display: none;
 }
 
 @-webkit-keyframes slide-up-in {
