@@ -3,11 +3,13 @@
 section{
     padding: 50px 0;
 }
+
 .about .wrapper{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
+
 .about-image{
     flex-basis: 35%;
     img{
@@ -15,6 +17,7 @@ section{
         box-shadow: 3px 3px #fff, 12px 12px $quinary;
     }
 }
+
 .about-text{
     flex-basis: 60%;
 }

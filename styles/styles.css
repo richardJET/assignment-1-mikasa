@@ -436,7 +436,7 @@ button h3:hover ~ i, button:focus .fa-paw {
 .gallery div {
   display: none;
 }
-.gallery div ul {
+.gallery ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -446,15 +446,15 @@ button h3:hover ~ i, button:focus .fa-paw {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.gallery div li {
+.gallery li {
   -ms-flex-preferred-size: 33%;
       flex-basis: 33%;
 }
-.gallery div img {
+.gallery img {
   -o-object-fit: contain;
      object-fit: contain;
 }
-.gallery div img:hover {
+.gallery img:hover {
   opacity: 0.7;
   cursor: pointer;
 }
@@ -463,25 +463,25 @@ button h3:hover ~ i, button:focus .fa-paw {
 }
 .gallery .div-up-in {
   display: block;
-  -webkit-animation: slide-up-in 1s forwards, fade-in 0.5s forwards;
-          animation: slide-up-in 1s forwards, fade-in 0.5s forwards;
+  -webkit-animation: slide-up-in 1s forwards, fade-in 1s forwards;
+          animation: slide-up-in 1s forwards, fade-in 1s forwards;
 }
 .gallery .div-up-out {
   display: block;
   position: relative;
   z-index: -1;
-  -webkit-animation: slide-up-out 1s forwards, fade-out 0.5s forwards;
-          animation: slide-up-out 1s forwards, fade-out 0.5s forwards;
+  -webkit-animation: slide-up-out 1s forwards, fade-out 1s forwards;
+          animation: slide-up-out 1s forwards, fade-out 1s forwards;
 }
 .gallery .div-down-in {
   display: block;
-  -webkit-animation: slide-down-in 1s forwards, fade-in 0.5s forwards;
-          animation: slide-down-in 1s forwards, fade-in 0.5s forwards;
+  -webkit-animation: slide-down-in 1s forwards, fade-in 1s forwards;
+          animation: slide-down-in 1s forwards, fade-in 1s forwards;
 }
 .gallery .div-down-out {
   display: block;
-  -webkit-animation: slide-down-out 1s forwards, fade-out 0.5s forwards;
-          animation: slide-down-out 1s forwards, fade-out 0.5s forwards;
+  -webkit-animation: slide-down-out 1s forwards, fade-out 1s forwards;
+          animation: slide-down-out 1s forwards, fade-out 1s forwards;
 }
 
 .modal {
@@ -494,8 +494,8 @@ button h3:hover ~ i, button:focus .fa-paw {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-102.5%);
+            transform: translateY(-102.5%);
   }
 }
 
@@ -505,8 +505,8 @@ button h3:hover ~ i, button:focus .fa-paw {
             transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-100%);
-            transform: translateY(-100%);
+    -webkit-transform: translateY(-102.5%);
+            transform: translateY(-102.5%);
   }
 }
 @-webkit-keyframes slide-up-out {

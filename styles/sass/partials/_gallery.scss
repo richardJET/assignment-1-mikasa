@@ -3,6 +3,7 @@
 .gallery-header .wrapper{
     position: relative;
 }
+
 .fa-bone{
     bottom: 50px;
     left: 70px;
@@ -33,10 +34,8 @@ button {
     .fa-paw{
         -webkit-text-stroke: 2px $quaternary;
         -webkit-text-fill-color: transparent;
-
         &:hover,
-        &:focus
-        {
+        &:focus{
             background-color: $quaternary;
             background-clip: text;
         }
@@ -53,56 +52,62 @@ button {
     flex-basis: 80%;
     div {
         display: none;
-        
-        ul{
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-        }
-        li{
-            flex-basis: 33%;
-        }
-        img{
-            object-fit: contain;
-            &:hover{
-                opacity: 0.7;
-                cursor: pointer;
-            }
+    }
+    ul{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    li{
+        flex-basis: 33%;
+    }
+
+    img{
+        object-fit: contain;
+        &:hover{
+            opacity: 0.7;
+            cursor: pointer;
         }
     }
+
     .div-select{
         display: block;
     }
+
     .div-up-in{
         display: block;
         animation: 
             slide-up-in 1s forwards,
-            fade-in 0.5s forwards;
+            fade-in 1s forwards;
     }
+
     .div-up-out{
         display: block;
         position: relative;
         z-index: -1;
         animation: 
             slide-up-out 1s forwards,
-            fade-out 0.5s forwards;
+            fade-out 1s forwards;
     }
+
     .div-down-in {
         display: block;
         animation: 
             slide-down-in 1s forwards,
-            fade-in 0.5s forwards;
+            fade-in 1s forwards;
     }
+
     .div-down-out {
         display: block;
         animation: 
             slide-down-out 1s forwards,
-            fade-out 0.5s forwards;
+            fade-out 1s forwards;
     }
 }
 
 .modal{
-    display: none;
+    display: none; //modal functionality incomplete
 }
 
 @keyframes slide-up-in{
@@ -110,7 +115,7 @@ button {
         transform: translateY(0);
     }
     100%{
-        transform: translateY(-100%);
+        transform: translateY(-102.5%);
     }
 }
 
