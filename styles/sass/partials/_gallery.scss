@@ -93,6 +93,8 @@ button {
 
     .div-down-in {
         display: block;
+        position: relative;
+        z-index: -1;
         animation: 
             slide-down-in 1s forwards,
             fade-in 1s forwards;
