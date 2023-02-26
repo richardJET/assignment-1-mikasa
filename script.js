@@ -10,7 +10,7 @@ galleryApp.itemIndex = li => {
 };
 
 galleryApp.timeline = () => {
-    timelineOl = document.querySelector('.timeline ol');
+    const timelineOl = document.querySelector('.timeline ol');
     timelineOl.addEventListener('click', e => {
         let timelineLiSelect;
         if (e.target.tagName === 'H3' || e.target.tagName === 'I') {
@@ -18,6 +18,10 @@ galleryApp.timeline = () => {
         } else if (e.target.tagName === 'BUTTON') {
             timelineLiSelect = e.target.parentElement;
         };
+        timelineOl.scroll({
+            left: timelineLiSelect.offsetLeft - window.innerWidth/2 + 59 ,
+            behavior: "smooth",
+        });
         const timelineLiAll = document.querySelectorAll('.timeline li');
         const galleryDivAll = document.querySelectorAll('.gallery-month');
         const galleryDivSelect = galleryDivAll[galleryApp.itemIndex(timelineLiSelect)];
@@ -30,20 +34,23 @@ galleryApp.timeline = () => {
         galleryDivAll.forEach(div => {
             if (div.classList.contains('div-select')) {
                 if (galleryApp.itemIndex(div) < galleryApp.itemIndex(timelineLiSelect)) {
-                    div.classList.add('div-up-out');
-                    galleryDivSelect.classList.add('div-up-in');
+                    div.classList.add('div-left-out');
+                    galleryDivSelect.classList.add('div-right-in');
                 } else {
-                    div.classList.add('div-down-out');
-                    galleryDivSelect.classList.add('div-down-in');
+                    div.classList.add('div-right-out');
+                    galleryDivSelect.classList.add('div-left-in');
                 }
                 div.addEventListener('animationend', () => {
-                    div.classList.remove('div-up-out', 'div-up-in', 'div-down-out', 'div-down-in', 'div-select');
-                    galleryDivSelect.classList.remove('div-up-out', 'div-up-in', 'div-down-out', 'div-down-in');
+                    div.classList.remove('div-right-out', 'div-right-in', 'div-left-out', 'div-left-in', 'div-select'); 
+                    galleryDivSelect.classList.remove('div-right-out', 'div-right-in', 'div-right-out', 'div-left-in');
                     galleryDivSelect.classList.add('div-select');
                     galleryApp.modal();
                 }, { once: true });
             };
         });
+    });
+    document.querySelector('.fa-chevron-right').addEventListener('click', () => {
+        document.querySelector('.timeline ol').scrollLeft += 100;
     });
 };
 
@@ -67,9 +74,18 @@ galleryApp.modal = () => {
     });
 };
 
+galleryApp.leftScroll = () => {
+    document.querySelector('.timeline ol').scrollLeft -= 200;    
+}
+
+galleryApp.rightScroll = () => {
+    document.querySelector('.timeline ol').scrollLeft += 200;
+}
+                        
 galleryApp.init = () => {
     galleryApp.timeline();
     galleryApp.modal();
+    galleryApp.timelineArrows();
 };
 
 
