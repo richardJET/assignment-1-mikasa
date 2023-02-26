@@ -21,7 +21,7 @@
 .timeline{
     text-align: center;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     h3{
         position: absolute;
         left: -15px;
@@ -33,36 +33,6 @@ ol{
     display: flex;
     justify-content: space-between;
     overflow-x: hidden;
-}
-
-button {
-    border: none;
-    cursor: pointer;
-    background:none;
-}
-
-li button{
-    position: relative;
-    margin: 10px 25px;
-    .fa-paw{
-        -webkit-text-stroke: 2px $quaternary;
-        -webkit-text-fill-color: transparent;
-        &:hover,
-        &:focus{
-            background-color: $quaternary;
-            background-clip: text;
-        }
-    }
-    .paw-select,
-    h3:hover ~ i,
-    &:focus .fa-paw{
-        background-color: $quaternary;
-        background-clip: text;
-    }
-}
-
-.chevron{
-    display: none;
 }
 
 .gallery{

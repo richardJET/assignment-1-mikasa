@@ -23,7 +23,7 @@
         <section class="gallery-section">
             <div class="wrapper">
                 <div class="timeline">
-                    <button onClick="galleryApp.leftScroll()"><i class="fa-solid fa-chevron-left chevron"></i></button>
+                    <button class="chevron" onClick="galleryApp.leftScroll()"><i class="fa-solid fa-chevron-left"></i></button>
                     <ol>
                         <li>
                             <button>
@@ -62,7 +62,7 @@
                             </button>
                         </li>
                     </ol>
-                    <button onClick="galleryApp.rightScroll()"><i class="fa-solid fa-chevron-right chevron"></i></button>
+                    <button class="chevron" onClick="galleryApp.rightScroll()"><i class="fa-solid fa-chevron-right chevron"></i></button>
                 </div>
                 <div class="gallery">
                     <div class="div-select gallery-month">
@@ -379,6 +379,9 @@
             </div>
         </section>
     </main>
+    <footer>
+        <p>Developed by <a href="https://richardtillo.com/" target="_blank">Richard Tillo</a></p>
+    </footer>
     <script src="./script.js"></script>
 </body>
 </html>

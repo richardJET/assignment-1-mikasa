@@ -8,3 +8,52 @@
         color:#fff;
     }
 }
+
+button {
+    border: none;
+    cursor: pointer;
+    background: none;
+}
+
+.chevron{
+    display: none;
+
+    &:hover,
+    &:focus{
+        color: #474747;
+    }
+}
+
+
+li button {
+    position: relative;
+    margin: 10px 25px;
+
+    .fa-paw {
+        -webkit-text-stroke: 2px $quaternary;
+        -webkit-text-fill-color: transparent;
+
+        &:hover,
+        &:focus {
+            background-color: $quaternary;
+            background-clip: text;
+        }
+    }
+
+    .paw-select,
+    h3:hover~i,
+    &:focus .fa-paw {
+        background-color: $quaternary;
+        background-clip: text;
+    }
+}
+
+.modal button {
+    top: -3px;
+    right: -3px;
+
+    &:hover,
+    &:focus{
+        color: gray;
+    }
+}
