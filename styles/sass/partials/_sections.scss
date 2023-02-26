@@ -11,7 +11,8 @@ section{
 }
 
 .about-image{
-    flex-basis: 35%;
+    flex-basis: 45%;
+    margin-right: 40px;
     img{
         border-radius: 10%;
         box-shadow: 3px 3px #fff, 12px 12px $quinary;
@@ -19,5 +20,5 @@ section{
 }
 
 .about-text{
-    flex-basis: 60%;
+    flex-basis: 50%;
 }
