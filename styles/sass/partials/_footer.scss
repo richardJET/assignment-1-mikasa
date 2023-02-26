@@ -1,0 +1,15 @@
+@use './variables' as *;
+
+footer{
+    background-color: $primary;
+    text-align: center;
+    padding: 10px;
+    p{
+        margin: 0;
+    }
+
+    a:hover,
+    a:focus{
+        color: $quinary;
+    }
+}

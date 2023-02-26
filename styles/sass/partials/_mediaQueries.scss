@@ -26,6 +26,10 @@
         margin-bottom: 60px;
     }
 
+    .timeline{
+        justify-content: space-between;
+    }
+
     ol{
         overflow-x: hidden;
     }
@@ -41,16 +45,16 @@
             flex-basis: 49%;
     }
 
+    h1{
+        font-size: 5rem;
+        margin-bottom: 100px;
+    }
+
     h5{
         font-size: 2rem;
     }
     .modal{
         padding: 28px;
         overflow-x: hidden;
-
-        button{
-            top:-3px;
-            right:-3px;
-        }
     }
 }

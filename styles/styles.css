@@ -410,9 +410,9 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .timeline h3 {
   position: absolute;
@@ -430,36 +430,6 @@ ol {
       -ms-flex-pack: justify;
           justify-content: space-between;
   overflow-x: hidden;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-  background: none;
-}
-
-li button {
-  position: relative;
-  margin: 10px 25px;
-}
-li button .fa-paw {
-  -webkit-text-stroke: 2px #FCBA04;
-  -webkit-text-fill-color: transparent;
-}
-li button .fa-paw:hover, li button .fa-paw:focus {
-  background-color: #FCBA04;
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-li button .paw-select,
-li button h3:hover ~ i, li button:focus .fa-paw {
-  background-color: #FCBA04;
-  -webkit-background-clip: text;
-          background-clip: text;
-}
-
-.chevron {
-  display: none;
 }
 
 .gallery {
@@ -671,12 +641,66 @@ h5 {
     opacity: 0;
   }
 }
+footer {
+  background-color: #f0f7ee;
+  text-align: center;
+  padding: 10px;
+}
+footer p {
+  margin: 0;
+}
+footer a:hover,
+footer a:focus {
+  color: #1B998B;
+}
+
 .button {
   padding: 10px 25px;
   background-color: #FCBA04;
 }
 .button:hover, .buttonfocus {
   color: #fff;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.chevron {
+  display: none;
+}
+.chevron:hover, .chevron:focus {
+  color: #474747;
+}
+
+li button {
+  position: relative;
+  margin: 10px 25px;
+}
+li button .fa-paw {
+  -webkit-text-stroke: 2px #FCBA04;
+  -webkit-text-fill-color: transparent;
+}
+li button .fa-paw:hover, li button .fa-paw:focus {
+  background-color: #FCBA04;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+li button .paw-select,
+li button h3:hover ~ i, li button:focus .fa-paw {
+  background-color: #FCBA04;
+  -webkit-background-clip: text;
+          background-clip: text;
+}
+
+.modal button {
+  top: -3px;
+  right: -3px;
+}
+.modal button:hover, .modal button:focus {
+  color: gray;
 }
 
 /* Portrait tablet and small desktops */
@@ -713,6 +737,11 @@ h5 {
     padding-left: 10px;
     margin-bottom: 60px;
   }
+  .timeline {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
   ol {
     overflow-x: hidden;
   }
@@ -726,15 +755,15 @@ h5 {
     -ms-flex-preferred-size: 49%;
         flex-basis: 49%;
   }
+  h1 {
+    font-size: 5rem;
+    margin-bottom: 100px;
+  }
   h5 {
     font-size: 2rem;
   }
   .modal {
     padding: 28px;
     overflow-x: hidden;
-  }
-  .modal button {
-    top: -3px;
-    right: -3px;
   }
 }
