@@ -46,6 +46,9 @@ li button {
         background-color: $quaternary;
         background-clip: text;
     }
+    &:disabled{
+        color: black;
+    }
 }
 
 .modal button {

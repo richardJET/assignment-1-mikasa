@@ -28,8 +28,11 @@ galleryApp.timeline = () => {
     
         timelineLiAll.forEach(li => {
             li.children[0].children[1].classList.remove('paw-select');
+            li.children[0].disabled = true;
         });
         timelineLiSelect.children[0].children[1].classList.add('paw-select');
+
+        console.log(timelineLiAll);
     
         galleryDivAll.forEach(div => {
             if (div.classList.contains('div-select')) {
@@ -45,6 +48,11 @@ galleryApp.timeline = () => {
                     galleryDivSelect.classList.remove('div-right-out', 'div-right-in', 'div-right-out', 'div-left-in');
                     galleryDivSelect.classList.add('div-select');
                     galleryApp.modal();
+                    timelineLiAll.forEach(li => {
+                        if(li !== timelineLiSelect){
+                            li.children[0].disabled = false;
+                        }
+                    });
                 }, { once: true });
             };
         });
@@ -65,6 +73,11 @@ galleryApp.modal = () => {
         let modalCaption = modal[1].children[1];
         modalImage.src = e.target.src;
         modalCaption.innerHTML = e.target.parentElement.children[1].innerHTML;
+        modal[0].addEventListener('click', e => {
+            modal.forEach(div => {
+                div.style.display = 'none';
+            });
+        });
         close = document.querySelector('.fa-xmark');
         close.addEventListener('click', e => {
             modal.forEach(div => {
@@ -85,7 +98,6 @@ galleryApp.rightScroll = () => {
 galleryApp.init = () => {
     galleryApp.timeline();
     galleryApp.modal();
-    galleryApp.timelineArrows();
 };
 
 
