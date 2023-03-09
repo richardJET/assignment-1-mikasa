@@ -258,6 +258,17 @@ ol {
   padding-left: 0;
 }
 
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 img,
 video {
   width: 100%;
@@ -439,6 +450,9 @@ ol {
 .gallery div {
   display: none;
 }
+.gallery .modal-toggle {
+  display: none;
+}
 .gallery ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -497,13 +511,21 @@ ol {
   height: 100%;
 }
 
+.left-arrow {
+  left: calc(50% - 450px);
+}
+
+.right-arrow {
+  left: calc(50% + 375px);
+}
+
 .modal {
   background-color: #fff;
-  z-index: 1;
+  z-index: 2;
   position: fixed;
   top: 50%;
   left: 50%;
-  width: 80%;
+  width: 80vh;
   max-width: 750px;
   max-height: 95vh;
   overflow-y: auto;
@@ -514,11 +536,6 @@ ol {
 }
 .modal div {
   display: block;
-}
-.modal button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
 }
 
 .modal-caption {
@@ -646,6 +663,7 @@ footer {
   background-color: #f0f7ee;
   text-align: center;
   padding: 10px;
+  margin-top: auto;
 }
 footer p {
   margin: 0;
@@ -699,12 +717,27 @@ li button:disabled {
   color: black;
 }
 
+.left-arrow,
+.right-arrow {
+  position: fixed;
+  bottom: calc(50% - 50px);
+  z-index: 3;
+  color: rgba(255, 255, 255, 0.9);
+}
+.left-arrow:hover, .left-arrow:focus,
+.right-arrow:hover,
+.right-arrow:focus {
+  color: lightgray;
+}
+
 .modal button {
-  top: -3px;
-  right: -3px;
+  top: 10px;
+  right: 10px;
+  position: absolute;
+  z-index: 3;
 }
 .modal button:hover, .modal button:focus {
-  color: gray;
+  color: #474747;
 }
 
 /* Portrait tablet and small desktops */
@@ -724,6 +757,19 @@ li button:disabled {
   }
   ol {
     overflow-x: auto;
+  }
+  .modal {
+    width: 80%;
+    max-width: 100vh;
+  }
+  .left-arrow {
+    left: calc(50% - 40vw - 70px);
+  }
+  .right-arrow {
+    left: calc(50% + 40vw);
+  }
+  h5 {
+    font-size: 2rem;
   }
 }
 /* Landscape phone to portrait tablet */
@@ -752,6 +798,16 @@ li button:disabled {
   .chevron {
     display: inline-block;
   }
+  .left-arrow {
+    bottom: 5vh;
+    height: 100px;
+    left: 15%;
+  }
+  .right-arrow {
+    bottom: 5vh;
+    height: 100px;
+    left: calc(85% - 62.5px);
+  }
 }
 /* Landscape phones and down */
 @media (max-width: 480px) {
@@ -763,11 +819,12 @@ li button:disabled {
     font-size: 5rem;
     margin-bottom: 100px;
   }
-  h5 {
-    font-size: 2rem;
-  }
   .modal {
     padding: 28px;
     overflow-x: hidden;
+  }
+  .modal button {
+    top: -4px;
+    right: -4px;
   }
 }

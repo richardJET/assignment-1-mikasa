@@ -6,6 +6,12 @@ ol{
     padding-left: 0;
 }
 
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
 img,
 video {
     width: 100%;
