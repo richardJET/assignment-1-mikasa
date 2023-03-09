@@ -56,15 +56,15 @@
     }
 
     .left-arrow{
-        bottom: 5vh;
+        bottom: 2vh;
         height: 100px;
-        left: 15%;
+        left: 14%;
     }
 
     .right-arrow{
-        bottom: 5vh;
+        bottom: 2vh;
         height: 100px;
-        left: calc(85% - 62.5px);
+        left: calc(86% - 68px);
     }
     
 }
@@ -83,6 +83,8 @@
     .modal{
         padding: 28px;
         overflow-x: hidden;
+        top: 45%;
+        max-height: 75vh;
 
         button{
             top: -4px;
