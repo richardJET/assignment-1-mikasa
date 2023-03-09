@@ -51,12 +51,28 @@ li button {
     }
 }
 
+.left-arrow,
+.right-arrow {
+    position: fixed;
+    bottom: calc(50% - 50px);
+    z-index: 3;
+    color: rgba(255, 255, 255, 0.9);
+
+    &:hover,
+    &:focus {
+        color: lightgray;
+    }
+}
+
 .modal button {
-    top: -3px;
-    right: -3px;
+    top: 10px;
+    right: 10px;
+    position: absolute;
+    z-index: 3;
 
     &:hover,
     &:focus{
-        color: gray;
+        color: #474747;
     }
 }
+

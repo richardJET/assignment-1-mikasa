@@ -12,6 +12,23 @@
     ol{
         overflow-x: auto;
     }
+
+    .modal{
+        width: 80%;
+        max-width: 100vh;
+    }
+
+    .left-arrow{
+        left: calc(50% - 40vw - 70px);
+    }
+
+    .right-arrow{
+        left: calc(50% + 40vw );
+    }
+
+    h5{
+        font-size: 2rem;
+    }
 }
 
 /* Landscape phone to portrait tablet */
@@ -37,6 +54,19 @@
     .chevron{
         display: inline-block;
     }
+
+    .left-arrow{
+        bottom: 5vh;
+        height: 100px;
+        left: 15%;
+    }
+
+    .right-arrow{
+        bottom: 5vh;
+        height: 100px;
+        left: calc(85% - 62.5px);
+    }
+    
 }
 
 /* Landscape phones and down */
@@ -50,11 +80,13 @@
         margin-bottom: 100px;
     }
 
-    h5{
-        font-size: 2rem;
-    }
     .modal{
         padding: 28px;
         overflow-x: hidden;
+
+        button{
+            top: -4px;
+            right: -4px;
+        }
     }
 }

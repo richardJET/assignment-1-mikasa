@@ -31,8 +31,6 @@ galleryApp.timeline = () => {
             li.children[0].disabled = true;
         });
         timelineLiSelect.children[0].children[1].classList.add('paw-select');
-
-        console.log(timelineLiAll);
     
         galleryDivAll.forEach(div => {
             if (div.classList.contains('div-select')) {
@@ -64,25 +62,37 @@ galleryApp.timeline = () => {
 
 galleryApp.modal = () => {
     galleryMonthDiv = document.querySelector('.div-select');
+    leftArrow = document.querySelector('.left-arrow');
+    rightArrow = document.querySelector('.right-arrow');
+    const modal = document.querySelectorAll('.modal-toggle');
+    let modalImage = modal[2].children[0].children[0];
+    let modalCaption = modal[2].children[1];
+
     galleryMonthDiv.addEventListener('click', e => {
-        const modal = document.querySelectorAll('.modal-toggle');
         modal.forEach(div => {
             div.style.display = 'block';
-        });
-        let modalImage = modal[1].children[0].children[0];
-        let modalCaption = modal[1].children[1];
+        });        
+        if(e.target.parentElement.previousElementSibling === null){
+            modal[1].style.display = 'none';
+        }
+        if (e.target.parentElement.nextElementSibling === null) {
+            modal[3].style.display = 'none';
+        }
         modalImage.src = e.target.src;
         modalCaption.innerHTML = e.target.parentElement.children[1].innerHTML;
-        modal[0].addEventListener('click', e => {
-            modal.forEach(div => {
-                div.style.display = 'none';
-            });
+    });
+
+   
+    close = document.querySelector('.fa-xmark');
+    close.addEventListener('click', e => {
+        modal.forEach(div => {
+            div.style.display = 'none';
         });
-        close = document.querySelector('.fa-xmark');
-        close.addEventListener('click', e => {
-            modal.forEach(div => {
-                div.style.display = 'none';
-            });
+    });
+
+    modal[0].addEventListener('click', e => {
+        modal.forEach(div => {
+            div.style.display = 'none';
         });
     });
 };
@@ -99,6 +109,40 @@ galleryApp.init = () => {
     galleryApp.timeline();
     galleryApp.modal();
 };
+
+galleryApp.leftArrow = () => {
+    galleryMonthUl = document.querySelector('.div-select ul');
+    modalImage = document.querySelector('.modal-image img');
+    modalCaption = document.querySelector('.modal-caption');
+    for (const li of [...galleryMonthUl.children] ){
+        if (modalImage.src === li.children[0].src) {
+            modalImage.src = li.previousElementSibling.children[0].src;
+            modalCaption.innerHTML = li.previousElementSibling.children[1].innerHTML;
+            if (li.previousElementSibling.previousElementSibling === null) {
+                document.querySelector('.left-arrow').style.display = 'none';
+            }
+            document.querySelector('.right-arrow').style.display = 'block';
+            break;
+        }
+    }
+}
+
+galleryApp.rightArrow = () => {
+    galleryMonthUl = document.querySelector('.div-select ul');
+    modalImage = document.querySelector('.modal-image img');
+    modalCaption = document.querySelector('.modal-caption');
+    for (const li of [...galleryMonthUl.children]) {
+        if (modalImage.src === li.children[0].src) {
+            modalImage.src = li.nextElementSibling.children[0].src;
+            modalCaption.innerHTML = li.nextElementSibling.children[1].innerHTML;
+            if(li.nextElementSibling.nextElementSibling === null){
+                document.querySelector('.right-arrow').style.display = 'none';
+            }
+            document.querySelector('.left-arrow').style.display = 'block';
+            break;
+        }
+    }
+}
 
 
 
